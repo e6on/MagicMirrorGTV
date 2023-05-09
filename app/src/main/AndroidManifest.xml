@@ -12,23 +12,33 @@
 
     <application
         android:icon="@mipmap/ic_launcher"
+        android:banner="@drawable/magicmirror"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.MagicMirror">
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:banner="@drawable/magicmirror"
             android:exported="true"
             android:icon="@drawable/magicmirror"
             android:logo="@drawable/magicmirror"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Leanback">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
