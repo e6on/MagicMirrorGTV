@@ -8,7 +8,7 @@ import android.os.Looper;
 import androidx.fragment.app.FragmentActivity;
 
 public class SplashScreenActivity extends FragmentActivity {
-    private static final int SPLASH_SCREEN_TIMEOUT = 3000; // 3 seconds
+    private static final int SPLASH_SCREEN_TIMEOUT = 1000; // 1 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

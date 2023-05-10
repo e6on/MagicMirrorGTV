@@ -2,13 +2,13 @@ package com.example.magicmirror;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
-
 import androidx.fragment.app.FragmentActivity;
 
 
@@ -22,11 +22,12 @@ public class MainActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         ProgressBar progressBar = findViewById(R.id.progressBar2);
         WebView webView = findViewById(R.id.webView);
-
+        webView.setBackgroundColor(Color.BLACK);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NORMAL);
         webView.getSettings().setUseWideViewPort(true);
@@ -35,6 +36,7 @@ public class MainActivity extends FragmentActivity {
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
+
                 // Show the progress bar
                 progressBar.setVisibility(View.VISIBLE);
             }

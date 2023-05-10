@@ -32,7 +32,7 @@
             android:icon="@drawable/magicmirror"
             android:logo="@drawable/magicmirror"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.Leanback">
+            android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
